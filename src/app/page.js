@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
 	return (
 		<main className="h-screen w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
@@ -9,9 +11,11 @@ export default function Home() {
 					<p className="text-2xl font-[400]">
 						Watch anywhere.Cancel anytime
 					</p>
-					<button className="btn-danger w-[250px]">
-						Get Started
-					</button>
+					<Link href="/register">
+						<button className="btn-danger w-[250px]">
+							Get Started
+						</button>
+					</Link>
 				</div>
 			</div>
 		</main>
