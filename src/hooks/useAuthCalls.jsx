@@ -5,9 +5,11 @@ import {
 	signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
 
 const useAuthCalls = () => {
 	const router = useRouter();
+	const dispatch = useDispatch();
 	const createUser = async (email, password, displayName) => {
 		try {
 			//? yeni bir kullanıcı oluşturmak için kullanılan firebase metodu
@@ -37,8 +39,18 @@ const useAuthCalls = () => {
 			toastErrorNotify(error.message);
 		}
 	};
+	const userObserver = () => {
+		onAuthStateChanged(auth, (user) => {
+			if (user) {
+				const { email, displayName, photoURL } = user;
+				dispatch(login[(email, displayName, photoURL)]);
+			} else {
+				dispatch(logout());
+			}
+		});
+	};
 
-	return { createUser, signIn };
+	return { createUser, signIn, userObserver };
 };
 
 export default useAuthCalls;
