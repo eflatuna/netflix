@@ -66,6 +66,7 @@ const Login = () => {
 						<button
 							type="button"
 							className="btn-danger flex justify-between text-center "
+							onClick={signUpProvider}
 						>
 							Continue with Google
 							<GoogleIcon />
