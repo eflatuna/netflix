@@ -4,7 +4,7 @@ import GoogleIcon from "/public/icons/GoogleIcon";
 import useAuthCalls from "@/hooks/useAuthCalls";
 import Link from "next/link";
 
-const Register = () => {
+const Login = () => {
 	const [info, setInfo] = useState({
 		email: "",
 		password: "",
@@ -77,4 +77,4 @@ const Register = () => {
 	);
 };
 
-export default Register;
+export default Login;
