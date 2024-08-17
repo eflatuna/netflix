@@ -7,7 +7,7 @@ const MovieSection = async ({ title, type }) => {
 	return (
 		<div>
 			<p>{title}</p>
-			<MovieList />
+			<MovieList movies={movies} />
 		</div>
 	);
 };
