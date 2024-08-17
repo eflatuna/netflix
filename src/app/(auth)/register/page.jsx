@@ -10,7 +10,7 @@ const Register = () => {
 		email: "",
 		password: "",
 	});
-	const { createUser, sighUpProvider } = useAuthCalls();
+	const { createUser, signUpProvider } = useAuthCalls();
 
 	const { email, password, firstName, lastName } = info;
 
@@ -79,7 +79,7 @@ const Register = () => {
 						<button
 							type="button"
 							className="btn-danger flex justify-between text-center "
-							ocClick={sighUpProvider}
+							ocClick={signUpProvider}
 						>
 							Continue with Google
 							<GoogleIcon />

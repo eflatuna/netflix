@@ -19,7 +19,7 @@ function classNames(...classes) {
 
 const Navbar = () => {
 	const [showBackground, setShowBackground] = useState(false);
-	const { logout } = useAuthCalls();
+	const { logOut } = useAuthCalls();
 	const { currentUser } = useSelector((state) => state.auth);
 	useEffect(() => {
 		const handleScroll = () => {
@@ -131,7 +131,7 @@ const Navbar = () => {
 													"block px-4 py-2 text-sm text-gray-700 hover:bg-slate-200 cursor-pointer"
 												)}
 												role="button"
-												onClick={() => logout()}
+												onClick={() => logOut()}
 											>
 												Log out
 											</span>

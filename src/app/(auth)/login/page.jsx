@@ -9,7 +9,7 @@ const Login = () => {
 		email: "",
 		password: "",
 	});
-	const { signIn } = useAuthCalls();
+	const { signIn, signUpProvider } = useAuthCalls();
 
 	const { email, password } = info;
 

@@ -8,6 +8,7 @@ import {
 	signInWithEmailAndPassword,
 	signInWithPopup,
 	signOut,
+	updateProfile,
 } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
