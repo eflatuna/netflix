@@ -12,6 +12,7 @@ const Movies = async () => {
 				overview={movies[0].overview}
 				id={movies[0].id}
 			/>
+			<div></div>
 		</div>
 	);
 };
