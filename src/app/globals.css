@@ -7,7 +7,6 @@ html {
 }
 body {
 	@apply bg-zinc-900 min-h-full;
-	color: white;
 }
 
 /** element bazında default olarak vermek istediğimiz stilleri base layer'da veriyoruz */
