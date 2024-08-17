@@ -131,7 +131,7 @@ const Navbar = () => {
 													"block px-4 py-2 text-sm text-gray-700 hover:bg-slate-200 cursor-pointer"
 												)}
 												role="button"
-												onClick={logout}
+												onClick={() => logout()}
 											>
 												Log out
 											</span>
