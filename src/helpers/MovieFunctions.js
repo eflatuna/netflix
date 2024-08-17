@@ -13,6 +13,7 @@ export const getMovies = async (type) => {
 		console.log(error);
 	}
 };
+
 export const getVideoKey = async (movieId) => {
 	const videoUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${API_KEY}`;
 	try {
@@ -22,6 +23,20 @@ export const getVideoKey = async (movieId) => {
 		}
 		const data = await res.json();
 		return data?.results[0]?.key;
+	} catch (error) {
+		console.log(error);
+	}
+};
+
+export const getMovieDetail = async (movieId) => {
+	const movieDetailBaseUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`;
+	try {
+		const res = await fetch(movieDetailBaseUrl);
+		if (!res.ok) {
+			throw new Error("failed to fetch data");
+		}
+		const data = await res.json();
+		return data;
 	} catch (error) {
 		console.log(error);
 	}
