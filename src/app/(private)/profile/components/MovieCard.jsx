@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
@@ -6,9 +7,16 @@ const defaultImage =
 
 const MovieCard = ({ poster_path, vote_average, id }) => {
 	return (
-		<div>
-			<Image src={poster_path ? IMG_API + poster_path : defaultImage} />
-			<span>{vote_average}</span>
+		<div className="w-40 h-[240] cursor-pointer relative">
+			<Image
+				height={240}
+				width={160}
+				src={poster_path ? IMG_API + poster_path : defaultImage}
+				alt="movie-card"
+			/>
+			<span className="text-white absolute bottom-1 right-1 font-semibold">
+				{vote_average.toFixed()}
+			</span>
 		</div>
 	);
 };
