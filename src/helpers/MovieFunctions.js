@@ -20,7 +20,7 @@ export const getVideoKey = async (movieId) => {
 		if (!res.ok) {
 			throw new Error("failed to fetch data");
 		}
-		const { data } = await res.json();
+		const data = await res.json();
 		return data?.results[0]?.key;
 	} catch (error) {
 		console.log(error);

@@ -1,6 +1,6 @@
 import React from "react";
 import { PlayIcon } from "@heroicons/react/24/solid";
-// import VideoSection from "./VideoSection";
+import VideoSection from "./VideoSection";
 import Link from "next/link";
 import { getVideoKey } from "@/helpers/MovieFunctions";
 
@@ -9,7 +9,7 @@ const HeroSection = async ({ title, overview, id }) => {
 	console.log(videoKey);
 	return (
 		<div className="relative h-[50vw]">
-			{/* <VideoSection videoKey={videoKey} /> */}
+			<VideoSection videoKey={videoKey} />
 			<div className="absolute top-[30%] ml-4 md:ml-16">
 				<p className="text-white text-1xl md:text-5xl h-full w-[50%] lg:text-6xl font-bold drop-shadow-xl">
 					{title}
