@@ -1,7 +1,8 @@
 import React from "react";
 import { PlayIcon } from "@heroicons/react/24/solid";
-import VideoSection from "./VideoSection";
+// import VideoSection from "./VideoSection";
 import Link from "next/link";
+// import { getVideoKey } from "@/helpers/movieFunctions";
 
 const HeroSection = async ({ title, overview, id }) => {
 	return (
