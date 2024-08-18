@@ -32,3 +32,15 @@ const MovieDetail = async ({ params: { movieId } }) => {
 };
 
 export default MovieDetail;
+
+export async function generateStaticParams() {
+	const [] = await Promise.all([
+		getMovies("now_playing"),
+		getMovies("popular"),
+		getMovies("top_rated"),
+		getMovies("upcoming"),
+	]);
+	return [...movies1, ...movies2, ...movies3, ...movies4].map((movie) => ({
+		movieId: movie.id.toString(),
+	}));
+}
