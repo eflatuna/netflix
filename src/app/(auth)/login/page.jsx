@@ -9,7 +9,7 @@ const Login = () => {
 		email: "",
 		password: "",
 	});
-	const { signIn, signUpProvider } = useAuthCalls();
+	const { signIn, signUpProvider, forgotPassword } = useAuthCalls();
 
 	const { email, password } = info;
 
@@ -52,7 +52,10 @@ const Login = () => {
 							<label htmlFor="password">Password</label>
 						</div>
 						<div className="flex justify-between">
-							<span className="py-3 font-[0.75em] cursor-pointer decoration-none text-gray-500 hover:text-[#ff4b45]">
+							<span
+								className="py-3 font-[0.75em] cursor-pointer decoration-none text-gray-500 hover:text-[#ff4b45]"
+								onClick={() => forgotPassword(email)}
+							>
 								Forgot Password
 							</span>
 							<Link

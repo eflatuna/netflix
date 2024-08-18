@@ -94,8 +94,29 @@ const useAuthCalls = () => {
 				console.log(error);
 			});
 	};
+	const forgotPassword = (email) => {
+		//? Email yoluyla şifre sıfırlama için kullanılan firebase metodu
+		sendPasswordResetEmail(auth, email)
+			.then(() => {
+				// Password reset email sent!
+				toastWarnNotify("Please check your mail box!");
+				// alert("Please check your mail box!");
+			})
+			.catch((err) => {
+				toastErrorNotify(err.message);
+				// alert(err.message);
+				// ..
+			});
+	};
 
-	return { createUser, signIn, userObserver, logOut, signUpProvider };
+	return {
+		createUser,
+		signIn,
+		userObserver,
+		logOut,
+		signUpProvider,
+		forgotPassword,
+	};
 };
 
 export default useAuthCalls;
