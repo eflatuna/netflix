@@ -1,8 +1,9 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
-// TODO: Replace the following with your app's Firebase project configuration
-// See: https://firebase.google.com/docs/web/learn-more#config-object
+//* https://firebase.google.com/docs/auth/web/start
+//* https://console.firebase.google.com/ => project settings
+//! firebase console settings bölümünden firebaseconfig ayarlarını al
 const firebaseConfig = {
 	apiKey: process.env.NEXT_PUBLIC_apiKey,
 	authDomain: process.env.NEXT_PUBLIC_authDomain,
@@ -11,6 +12,7 @@ const firebaseConfig = {
 	messagingSenderId: process.env.NEXT_PUBLIC_messagingSenderId,
 	appId: process.env.NEXT_PUBLIC_appId,
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
