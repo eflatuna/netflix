@@ -9,9 +9,9 @@ const Movies = async () => {
 	return (
 		<div>
 			<HeroSection
-				title={movies[0].title}
-				overview={movies[0].overview}
-				id={movies[0].id}
+				title={movies[0]?.title}
+				overview={movies[0]?.overview}
+				id={movies[0]?.id}
 			/>
 			<div>
 				<MovieSection title="NOW PLAYING" type="now_playing" />
