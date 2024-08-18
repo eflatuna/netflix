@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import MovieCard from "./MovieCard";
 import { useRef } from "react";
@@ -9,7 +10,7 @@ const MovieList = ({ movies }) => {
 
 	return (
 		<div
-			className="grid grid-flow-col gap-2 overflow-x-scroll"
+			className="grid grid-flow-col gap-2 overflow-x-scroll "
 			{...events}
 			ref={ref}
 		>
